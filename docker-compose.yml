@@ -1,0 +1,11 @@
+services:
+  todos:
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - "4000:4000"
+    volumes:
+      - "./:/todos"
+      - "/todos/node_modules"
